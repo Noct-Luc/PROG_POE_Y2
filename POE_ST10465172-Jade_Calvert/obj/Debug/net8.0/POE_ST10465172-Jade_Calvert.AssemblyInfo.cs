@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POE_ST10465172-Jade_Calvert")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f95f412518a8055f9f6413e2434a8d38dedef0aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("POE_ST10465172-Jade_Calvert")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POE_ST10465172-Jade_Calvert")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

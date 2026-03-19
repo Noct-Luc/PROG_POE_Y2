@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\source\\repos\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj": {}
+    "C:\\Users\\Student\\Source\\Repos\\PROG_POE_Y2\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\source\\repos\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj": {
+    "C:\\Users\\Student\\Source\\Repos\\PROG_POE_Y2\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Source\\Repos\\PROG_POE_Y2\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj",
         "projectName": "POE_ST10465172-Jade_Calvert",
-        "projectPath": "C:\\Users\\Student\\source\\repos\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj",
+        "projectPath": "C:\\Users\\Student\\Source\\Repos\\PROG_POE_Y2\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\source\\repos\\POE_ST10465172-Jade_Calvert\\POE_ST10465172-Jade_Calvert\\obj\\",
+        "outputPath": "C:\\Users\\Student\\Source\\Repos\\PROG_POE_Y2\\POE_ST10465172-Jade_Calvert\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
