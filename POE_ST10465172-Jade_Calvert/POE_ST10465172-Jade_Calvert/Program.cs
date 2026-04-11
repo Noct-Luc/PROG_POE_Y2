@@ -52,7 +52,7 @@ public class Program
             { "Help", "Ask about \"Cyber Security\", \"Types\", \"Phishing\", \"Safe Browsing\", or say \"Hello\". Say 'Bye' to exit." },
             { "How are you?", "I don't have feelings, but I'm ready to help. What cyber security topic interests you?" },
             { "What is the meaning of life", "Many answers exist; here, let's focus on cyber security. Ask me a question." },
-
+            {"You suck", "I'm here to help with cyber security questions. Let's keep the conversation respectful before I get rude." },
             { "Bye", "Goodbye. Stay safe online." }
         };
 
