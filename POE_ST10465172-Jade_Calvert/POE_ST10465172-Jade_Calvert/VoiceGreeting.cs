@@ -6,16 +6,14 @@ public static class VoiceGreeting
 {
     private static SoundPlayer _player;
 
-    // Play a WAV file. If fileName is an absolute path it will be used directly;
-    // otherwise the file is looked up in <appBase>/Assets/<fileName>.
-    // Set block = true to wait for playback to finish.
-    public static bool Greet(string fileName, bool block = false)
+    
+    public static bool Greet(string FFVII, bool block = false)
     {
         try
         {
-            string path = Path.IsPathRooted(fileName)
-                ? fileName
-                : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", C: \Users\Student\Source\Repos\PROG_POE_Y2\Assets\FFVII - fanfare.wav);
+            string path = Path.IsPathRooted(FFVII)
+                ? FFVII 
+                : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "C: \Users\Student\Source\Repos\PROG_POE_Y2\Assets\FFVII - fanfare.wav", FFVII);
 
             if (!File.Exists(path))
             {
