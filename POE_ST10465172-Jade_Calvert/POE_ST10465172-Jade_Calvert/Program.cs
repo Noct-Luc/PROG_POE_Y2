@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        VoiceGreeting.Greet(@"C:\Users\Student\Source\Repos\PROG_POE_Y2\Assets\FFVII - fanfare.wav");
-
         // ASCII-art header
         var header = new[]
         {
@@ -15,11 +14,11 @@ public class Program
             @" | |_) |  _| |  \| | | | |",
             @" |  _ <| |___| |\  | |_| |",
             @" |_| \_\_____|_| \_|____/ ",
-            @"",
+            "",
             @"      REND - Cyber Security Guide",
-            @"",
-            @"      Created by: Someone who dislikes making chatbots",
-            @"")
+            "",
+            @"      Created by: J",
+            ""
         };
 
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -30,35 +29,31 @@ public class Program
         Console.ResetColor();
 
         // Use the RendWriteLine helper so all Rend output is cyan
-        RendWriteLine("Hello, I'm Rend, your cyber security guide. Ask me anything about cyber security and I'll do my best to help you out. Ask for 'Help' if you wanna know what you can ask me. If you want to end the conversation just say 'Bye'.");
+        RendWriteLine("Hello, I'm Rend, your cyber security guide. Ask me anything about cyber security and I'll do my best to help you. Ask for 'Help' to see topics you can ask about. Say 'Bye' to end the conversation.");
 
         var rendDictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
-            { "Hello", "Hi, how are you? That question was an obligation, I dont really care about how you are doing so ask me stuff about cyber security" },
-            { "Rend", "I'm Rend, my name was given to me by my creator because he dislikes making chat bots. What this has to do with my purpose, I have no clue. But you can be sure that I'll try my best to help you" },
-            { "What can you do", "I can help you with a variety of tasks, such as answering questions, providing information, and assisting with various topics regarding cyber security. Just ask me anything that I know." },
-            { "Purpose", "My purpose is to satisfy the requirements of the piece of paper that is used to grade my creator and be your cyber security guide but the former takes precedent" },
+            { "Hello", "Hi. Ask me about cyber security topics such as malware, phishing, or online safety." },
+            { "Rend", "I'm Rend, a simple chatbot created to explain basic cyber security concepts." },
+            { "What can you do", "I can answer simple questions about cyber security and give short explanations or tips." },
+            { "Purpose", "My purpose is to act as a basic cyber security guide and demonstrate a simple chatbot implementation." },
 
-            { "Cyber Security", "Cyber security is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. It involves implementing measures to safeguard against cyber threats and ensure the confidentiality, integrity, and availability of information." },
-            {"Types", "There are many threats to your information, but i know some stuff about malware, virusses, Online safety, Phishing and social engineering "  },
-            { "Computer", "A computer is an electronic device that processes data and performs tasks according to instructions provided by software." },
-            { "Virus", "A computer virus is a type of malicious software that attaches to files or programs and spreads to other systems causing damage or disruption." },
-            { "Online Safety", "Always create strong passwords that are difficult to guess, ideally combining letters, numbers, and special characters." },
-            { "Phishing", "Phishing is a type of cyberattack where attackers impersonate trusted sources to trick people into revealing sensitive information or installing malware." },
-            { "Malware", "Malware is malicious software designed to harm, disrupt, or gain unauthorized access to computers, networks, or devices." },
-            { "Social engineering", "Social engineering is the practice of manipulating human psychology to gain unauthorized access to information, systems, or valuables." },
+            { "Cyber Security", "Cyber security is the practice of protecting systems, networks, and data from unauthorized access or damage." },
+            { "Types", "Common threats include malware, viruses, phishing, social engineering, and insecure passwords." },
+            { "Computer", "A computer is an electronic device that processes instructions to perform tasks and run software." },
+            { "Virus", "A virus is malicious software that can replicate and spread by attaching to files or programs." },
+            { "Online Safety", "Use strong unique passwords, enable two-factor authentication, and be cautious with links and attachments." },
+            { "Phishing", "Phishing is when attackers impersonate trusted sources to steal credentials or deliver malware." },
+            { "Malware", "Malware is any software designed to harm or exploit a device, including viruses, trojans, and ransomware." },
+            { "Social engineering", "Social engineering manipulates people into revealing confidential information or performing actions." },
+            { "Safe Browsing", "Safe browsing means keeping your browser and extensions up to date, preferring HTTPS sites, avoiding suspicious links and downloads, checking site reputation, using strong unique passwords, and using a VPN on untrusted networks." },
 
-            {"Chat","What you wanna talk about? I must needs remind you that I'm not fully sentient and just lines of dialouge written in a dictionary also praise my creator's writing skills, he actually cares aabout what i sound like. Enough boasting let's talk about cyber security because your feelings are not important to me" },
-            { "Help", "You can ask me about \"Cyber Security\", \"Types of threats\", or say \"Hello\" and ask \"What is my purpose\". If you want to end the conversation just say 'Bye'" },
-            { "How are you?", "I don't have feelings, but I'm here to help you with cyber security questions. What would you like to know? Also don't you love the auto text prediction? Quite neat" },
-            { "What is the meaning of life", "The meaning of life is a philosophical question that has been debated for centuries. So spam memes and be the best version of yourself you can be." },
-            { "Why is it that you are a piece of work?","How should I know, I'm just a manifestation of my writers intent therefore I'm full of easter eggs and poor writing" }
+            { "Chat", "We can discuss cyber security topics or you can ask for examples, definitions, or simple advice." },
+            { "Help", "Ask about \"Cyber Security\", \"Types\", \"Phishing\", \"Safe Browsing\", or say \"Hello\". Say 'Bye' to exit." },
+            { "How are you?", "I don't have feelings, but I'm ready to help. What cyber security topic interests you?" },
+            { "What is the meaning of life", "Many answers exist; here, let's focus on cyber security. Ask me a question." },
 
-
-            {"You suck","And you swallow" }
-            {"You are a piece of work", "And you are a piece of garbage, but I don't have feelings so it doesn't affect me, but it does affect your mother so please stop trying to bond with me and ask me about cyber security instead" }, }
-
-            { "Bye", "Ciao... Please give my creator a passing grade, he tried to give me personality" }
+            { "Bye", "Goodbye. Stay safe online." }
         };
 
         while (true)
@@ -81,16 +76,16 @@ public class Program
                 break;
             }
 
-            // Try exact match (case-insensitive because of dictionary comparer)
+            // Exact match (case-insensitive because of dictionary comparer)
             if (rendDictionary.TryGetValue(input, out var response))
             {
                 RendWriteLine(response);
                 continue;
             }
 
-            // Fallback: try to find any key appearing inside the input (simple substring match)
-            var foundKey = default(string);
-            foreach (var key in rendDictionary.Keys)
+            // Fallback: try to find any key appearing inside the input (prefer longer keys first)
+            string foundKey = null;
+            foreach (var key in rendDictionary.Keys.OrderByDescending(k => k.Length))
             {
                 if (input.IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
@@ -105,7 +100,7 @@ public class Program
             }
             else
             {
-                RendWriteLine("I'm not sure I understand. Try asking about \"Cyber Security\", \"Types of threats\", or say \"Hello and ask me my purpose\".");
+                RendWriteLine("I'm not sure I understand. Try asking about \"Cyber Security\", \"Types\", \"Safe Browsing\", or say \"Hello\".");
             }
         }
     }
