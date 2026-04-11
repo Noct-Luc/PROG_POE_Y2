@@ -53,7 +53,10 @@ public class Program
             { "How are you?", "I don't have feelings, but I'm here to help you with cyber security questions. What would you like to know? Also don't you love the auto text prediction? Quite neat" },
             { "What is the meaning of life", "The meaning of life is a philosophical question that has been debated for centuries. So spam memes and be the best version of yourself you can be." },
             { "Why is it that you are a piece of work?","How should I know, I'm just a manifestation of my writers intent therefore I'm full of easter eggs and poor writing" }
-      
+
+
+            {"You suck","And you swallow" }
+
 
             { "Bye", "Ciao... Please give my creator a passing grade, he tried to give me personality" }
         };
