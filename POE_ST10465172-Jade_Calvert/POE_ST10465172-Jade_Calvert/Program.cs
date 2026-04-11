@@ -5,6 +5,8 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        VoiceGreeting.Greet(@"C:\Users\Student\Source\Repos\PROG_POE_Y2\Assets\FFVII - fanfare.wav");
+
         // ASCII-art header
         var header = new[]
         {
@@ -17,7 +19,7 @@ public class Program
             @"      REND - Cyber Security Guide",
             @"",
             @"      Created by: Someone who dislikes making chatbots",
-            @""
+            @"")
         };
 
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -28,14 +30,14 @@ public class Program
         Console.ResetColor();
 
         // Use the RendWriteLine helper so all Rend output is cyan
-        RendWriteLine("Hello, I'm Rend, your cyber security guide. Ask me anything about cyber security and I'll do my best to help you out. If you want to end the conversation just say 'Bye'");
+        RendWriteLine("Hello, I'm Rend, your cyber security guide. Ask me anything about cyber security and I'll do my best to help you out. Ask for 'Help' if you wanna know what you can ask me. If you want to end the conversation just say 'Bye'.");
 
         var rendDictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
             { "Hello", "Hi, how are you? That question was an obligation, I dont really care about how you are doing so ask me stuff about cyber security" },
             { "Rend", "I'm Rend, my name was given to me by my creator because he dislikes making chat bots. What this has to do with my purpose, I have no clue. But you can be sure that I'll try my best to help you" },
-            { "What can you do?", "I can help you with a variety of tasks, such as answering questions, providing information, and assisting with various topics regarding cyber security. Just ask me anything that I know." },
-            { "What is your purpose?", "My purpose is to satisfy the requirements of the piece of paper that is used to grade my creator and be your cyber security guide but the former takes precedent" },
+            { "What can you do", "I can help you with a variety of tasks, such as answering questions, providing information, and assisting with various topics regarding cyber security. Just ask me anything that I know." },
+            { "Purpose", "My purpose is to satisfy the requirements of the piece of paper that is used to grade my creator and be your cyber security guide but the former takes precedent" },
 
             { "Cyber Security", "Cyber security is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. It involves implementing measures to safeguard against cyber threats and ensure the confidentiality, integrity, and availability of information." },
             {"Types", "There are many threats to your information, but i know some stuff about malware, virusses, Online safety, Phishing and social engineering "  },
@@ -45,8 +47,13 @@ public class Program
             { "Phishing", "Phishing is a type of cyberattack where attackers impersonate trusted sources to trick people into revealing sensitive information or installing malware." },
             { "Malware", "Malware is malicious software designed to harm, disrupt, or gain unauthorized access to computers, networks, or devices." },
             { "Social engineering", "Social engineering is the practice of manipulating human psychology to gain unauthorized access to information, systems, or valuables." },
+
             {"Chat","What you wanna talk about? I must needs remind you that I'm not fully sentient and just lines of dialouge written in a dictionary also praise my creator's writing skills, he actually cares aabout what i sound like. Enough boasting let's talk about cyber security because your feelings are not important to me" },
-            { "Help", "You can ask me about \"Cyber Security\", \"Types of threats\", or say \"Hello and ask me my purpose\". If you want to end the conversation just say 'Bye'" },
+            { "Help", "You can ask me about \"Cyber Security\", \"Types of threats\", or say \"Hello\" and ask \"What is my purpose\". If you want to end the conversation just say 'Bye'" },
+            { "How are you?", "I don't have feelings, but I'm here to help you with cyber security questions. What would you like to know? Also don't you love the auto text prediction? Quite neat" },
+            { "What is the meaning of life", "The meaning of life is a philosophical question that has been debated for centuries. So spam memes and be the best version of yourself you can be." },
+            { "Why is it that you are a piece of work?","How should I know, I'm just a manifestation of my writers intent therefore I'm full of easter eggs and poor writing" }
+      
 
             { "Bye", "Ciao... Please give my creator a passing grade, he tried to give me personality" }
         };
@@ -108,4 +115,4 @@ public class Program
         Console.WriteLine("Rend: " + message);
         Console.ForegroundColor = previous;
     }
-}       
+}
