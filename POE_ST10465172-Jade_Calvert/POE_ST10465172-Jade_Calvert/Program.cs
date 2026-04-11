@@ -56,7 +56,7 @@ public class Program
 
 
             {"You suck","And you swallow" }
-
+            {"You are a piece of work", "And you are a piece of garbage, but I don't have feelings so it doesn't affect me, but it does affect your mother so please stop trying to bond with me and ask me about cyber security instead" }, }
 
             { "Bye", "Ciao... Please give my creator a passing grade, he tried to give me personality" }
         };
