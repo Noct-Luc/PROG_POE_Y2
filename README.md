@@ -13,3 +13,7 @@ Version 0-5: Audio path fixed, code still does not build though, thus making cha
 Version 0-6: Improved dialouge with added insult function
 
 Version 0-7: Removed voice greeting as it caused build error
+
+Version 0-8: Seperated Dictionary
+
+<img width="1904" height="1026" alt="image" src="https://github.com/user-attachments/assets/35634371-0ad4-4ebb-b558-06f34e014ba1" />
