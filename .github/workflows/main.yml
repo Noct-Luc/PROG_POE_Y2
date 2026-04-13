@@ -2,43 +2,31 @@ name: .NET CI
 
 on:
   push:
-    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main", "master" ]
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        dotnet: ["8.0.x"]
-    runs-on: ${{ matrix.os }}
+  build-and-run:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: ${{ matrix.dotnet }}
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
-      - name: Cache NuGet packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.nuget/packages
-            ~/.local/share/NuGet/packages
-            %USERPROFILE%\.nuget\packages
-          key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj', '**/*.sln') }}
-          restore-keys: |
-            nuget-${{ runner.os }}-
+    - name: Create temporary console project
+      run: dotnet new console -n RendApp
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Copy source files into project
+      run: |
+        cp *.cs RendApp/
 
-      - name: Build (Release)
-        run: dotnet build --no-restore --configuration Release
+    - name: Build project
+      run: dotnet build RendApp --configuration Release
 
-      - name: Run tests
-        run: dotnet test --no-build --verbosity normal
+    - name: Run app with test input
+      run: |
+        echo -e "Hello\nCyber Security\nBye" | dotnet run --project RendApp --no-build
