@@ -20,10 +20,6 @@ jobs:
     - name: Create temporary console project
       run: dotnet new console -n RendApp
 
-    - name: Copy source files into project
-      run: |
-        cp *.cs RendApp/
-
     - name: Build project
       run: dotnet build RendApp --configuration Release
 
