@@ -1,31 +1,32 @@
-​
-Jade Calvert​
 name: .NET CI
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repo
+      uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Create temp project
+      run: dotnet new console -n RendApp
 
-      - name: Build project
-        run: dotnet build --configuration Release --no-restore
+    - name: Replace Program.cs
+      run: |
+        cp Program.cs RendApp/Program.cs
 
-      - name: Run tests (if any)
-        run: dotnet test --no-build --verbosity normal
+    - name: Build project
+      run: dotnet build RendApp --configuration Release
+
+    - name: Run app (test input)
+      run: |
+        echo -e "Hello\nBye" | dotnet run --project RendApp --no-build
