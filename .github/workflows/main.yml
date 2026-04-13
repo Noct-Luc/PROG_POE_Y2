@@ -2,31 +2,29 @@ name: .NET CI
 
 on:
   push:
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build-and-run:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v3
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: '6.0.x'
 
-    - name: Create temp project
-      run: dotnet new console -n RendApp
-
-    - name: Replace Program.cs
-      run: |
-        cp Program.cs RendApp/Program.cs
+    - name: Restore dependencies
+      run: dotnet restore
 
     - name: Build project
-      run: dotnet build RendApp --configuration Release
+      run: dotnet build --no-restore
 
-    - name: Run app (test input)
-      run: |
-        echo -e "Hello\nBye" | dotnet run --project RendApp --no-build
+    - name: Run project
+      run: dotnet run
