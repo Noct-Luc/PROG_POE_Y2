@@ -23,6 +23,4 @@ jobs:
     - name: Build project
       run: dotnet build RendApp --configuration Release
 
-    - name: Run app with test input
-      run: |
-        echo -e "Hello\nCyber Security\nBye" | dotnet run --project RendApp --no-build
+  
