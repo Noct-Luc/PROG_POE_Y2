@@ -19,3 +19,6 @@ Version 0-8: Seperated Dictionary
 CI workflows
 
 <img width="1904" height="1026" alt="image" src="https://github.com/user-attachments/assets/35634371-0ad4-4ebb-b558-06f34e014ba1" />
+
+Version 0-9: Made REND a GUI
+
