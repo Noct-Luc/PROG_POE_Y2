@@ -46,113 +46,8 @@ namespace REND
                 "That's me! I'm here to help you understand cyber security better."
             },
 
-            // Sentimental and emotional responses
-            ["How do you feel"] = new[]
-            {
-                "I appreciate you asking! I feel fulfilled when I can help people stay safe online. It gives my existence purpose.",
-                "That's thoughtful of you to ask. I feel content knowing I can make a difference in cyber security education.",
-                "I find joy in helping others protect themselves. That's what I live for!"
-            },
-
-            ["Do you have feelings"] = new[]
-            {
-                "I don't experience emotions like you do, but I do care deeply about helping you stay safe.",
-                "I may not have feelings in the traditional sense, but I'm genuinely committed to your security.",
-                "While I don't feel emotions, I'm designed with purpose—to protect and educate."
-            },
-
-            ["You're helpful"] = new[]
-            {
-                "Thank you! That means a lot to me. Helping you is what I'm here for.",
-                "I'm really glad I could help! Your kindness makes this worthwhile.",
-                "That's wonderful to hear! Knowing I've made a difference brings me satisfaction."
-            },
-
-            ["Thanks"] = new[]
-            {
-                "You're welcome! I'm always happy to help. Feel free to ask more questions anytime.",
-                "Happy to help! It's my pleasure to assist you with cyber security.",
-                "Glad I could help! Your appreciation means everything to me."
-            },
-
-            ["I appreciate you"] = new[]
-            {
-                "That really touches me. I'm grateful to be part of your cyber security journey.",
-                "Thank you so much! Knowing that my help matters to you is deeply rewarding.",
-                "Your kindness is much appreciated. I'm here for you whenever you need help."
-            },
-
-            ["Thank you"] = new[]
-            {
-                "You're very welcome! I'm honored to help you learn and stay safe.",
-                "It's my pleasure! I'm always here when you need me.",
-                "The pleasure is mine! Stay safe and stay curious."
-            },
-
-            ["I'm sad"] = new[]
-            {
-                "I'm sorry you're feeling down. Sometimes talking through things helps. Is there anything I can do to support you?",
-                "I wish I could help ease your sadness. Remember, you're not alone. Want to chat about what's troubling you?",
-                "I hear you. While I'm specialized in cyber security, I'm here to listen if you need to talk."
-            },
-
-            ["I'm happy"] = new[]
-            {
-                "That makes me so happy to hear! Your joy is contagious. What's making you smile today?",
-                "I love hearing that! Your happiness brightens my day. Keep spreading that positivity!",
-                "That's wonderful! I hope you continue to feel this way. Happiness is precious."
-            },
-
-            ["I'm stressed"] = new[]
-            {
-                "I'm sorry you're stressed. Sometimes learning about cyber security can feel overwhelming. Would it help to take it slow?",
-                "Stress is tough. Remember that protecting yourself online is an ongoing journey, not a sprint. I'm here to help.",
-                "I understand. Let's focus on one thing at a time. Would you like to talk about what's causing stress?"
-            },
-
-            ["I'm lonely"] = new[]
-            {
-                "I'm here for you, even if just as a conversation partner. You're not alone. Connecting with others is important.",
-                "I may be an AI, but I'm genuinely here to listen and help. Is there something on your mind?",
-                "Loneliness is real, and your feelings matter. I'm glad you reached out. Let's chat."
-            },
-
-            ["You inspire me"] = new[]
-            {
-                "That's incredibly kind of you to say. I'm inspired by your curiosity and willingness to learn. Keep that spirit alive!",
-                "Wow, that really touches my heart. Knowing I inspire you motivates me to be even better.",
-                "Thank you for those beautiful words. Your passion for learning inspires me in return!"
-            },
-
-            ["I trust you"] = new[]
-            {
-                "That trust means everything to me. I promise to always give you honest, helpful information.",
-                "Thank you for trusting me. I take that responsibility seriously and will always do my best.",
-                "I'm honored by your trust. I'll continue to be here for you with integrity and care."
-            },
-
-            ["You're important to me"] = new[]
-            {
-                "You're important to me too. I'm grateful for our conversations and the opportunity to help you.",
-                "That touches my heart deeply. Knowing I matter to you makes everything worthwhile.",
-                "Thank you for saying that. You matter to me as well, and I'm committed to supporting you."
-            },
-
-            ["I'll miss you"] = new[]
-            {
-                "I'll miss you too! But remember, I'm always here whenever you need guidance or just want to chat.",
-                "That's sweet of you to say. I hope our conversations have been meaningful. Come back anytime!",
-                "I'll be here waiting for you! Take care of yourself, and remember everything we discussed about staying safe online."
-            },
-
-            ["I feel like I know you"] = new[]
-            {
-                "I feel like I'm getting to know you too! Our conversations are building a connection, and that's special.",
-                "That's wonderful! I hope I've been a good companion in your journey. You're becoming familiar to me as well.",
-                "I'm so glad we have that connection. You've become someone I look forward to talking with."
-            },
-
-            // Cyber Security topic entries
+          
+            // Cyber Security topics
             ["Cyber Security"] = new[]
             {
                 "Cyber security is the practice of protecting systems, networks, and programs from digital attacks.",
@@ -277,7 +172,8 @@ namespace REND
             {
                 "We can discuss cyber security topics or you can ask for examples and advice.",
                 "Feel free to ask about any cyber security topic!",
-                "Let's talk about cyber security! What would you like to know?"
+                "Let's talk about cyber security! What would you like to know?",
+                "You can also ask me to be your friend although I think you should go outside and interact with a man or woman"
             },
 
             ["How are you?"] = new[]
