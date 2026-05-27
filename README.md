@@ -24,10 +24,10 @@ Version 0-9: Made REND a GUI
 
 Version 0-10: Added Sentiment statements that will allow users to feel attached
 
-Version 0-11: 
+Version 0-11: Added Memory recall
 
-Version 0-12:
+Version 0-12: Added Insults
 
-Version 0-13:
+Version 0-13: Added more cyber security tips
 
-Version 0-14:
+Version 0-14: Added random tips selection
