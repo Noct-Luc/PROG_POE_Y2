@@ -1,4 +1,6 @@
 Chatbot Rend
+Setup: Copy the code from repo and run it in your IDE
+
 
 Version 0-1: reponse dictionary made
 
