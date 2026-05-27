@@ -272,6 +272,21 @@ namespace REND
                 "2FA significantly improves account security. Do you use it on your important accounts?"
             },
 
+             //Disrespectful/ abusive entries
+
+             ["Fuck"] = new[]
+             {
+                "When and where Sister/ Brother",
+                 "Fuck you too mate",
+                 "I did do your mother, tragically after I was done with her, you were born. Sorry kid... I'm your father"
+             },
+             ["Gay/Lesbian"] = new[]
+             {
+             "We can discuss the nature of your sexuality after you find you find your father you damn inbred",
+             "If you were any more of a dick, gay guys would be trying to suck your forehead",
+             "Bitch, I'm straighter than the pole your mother danced on last night."
+             },
+
             // Conversational entries
             ["Chat"] = new[]
             {
