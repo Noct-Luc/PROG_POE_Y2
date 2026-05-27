@@ -23,3 +23,11 @@ CI workflows
 Version 0-9: Made REND a GUI
 
 Version 0-10: Added Sentiment statements that will allow users to feel attached
+
+Version 0-11: 
+
+Version 0-12:
+
+Version 0-13:
+
+Version 0-14:
