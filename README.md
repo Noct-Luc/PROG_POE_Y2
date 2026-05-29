@@ -1,6 +1,6 @@
 Chatbot Rend
 Setup: Copy the code from repo and run it in your IDE
-
+https://youtu.be/j75p_eyUN_0?si=heUk-tKL3hzo9BGc
 
 Version 0-1: reponse dictionary made
 
