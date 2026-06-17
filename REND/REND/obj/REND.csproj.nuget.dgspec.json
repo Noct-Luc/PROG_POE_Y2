@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND.csproj": {}
+    "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND\\REND.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND.csproj": {
+    "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND\\REND.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND\\REND.csproj",
         "projectName": "REND",
-        "projectPath": "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND.csproj",
+        "projectPath": "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND\\REND.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\source\\repos\\REND\\REND\\obj\\",
+        "outputPath": "C:\\Users\\Student\\source\\repos\\REND\\REND\\REND\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

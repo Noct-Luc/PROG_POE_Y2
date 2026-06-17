@@ -3,6 +3,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using MySql.Data.MySqlClient;
+
+ string connectionString= "Server=LabVM2049939\\SQLEXPRESS;Database=REND;Trusted_Connection=True;TrustServerCertificate=True;";
 
 namespace REND
 {
@@ -13,11 +16,13 @@ namespace REND
     {
         private string _userName;
         private const int CenteredWidth = 50; // Width for centering ASCII art
+        private RendMinigame _minigame;
 
         public MainWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            _minigame = new RendMinigame();
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -56,7 +61,7 @@ namespace REND
             {
                 RendWriteLine("Hello! I'm Rend, your cyber security guide. What's your name?");
             }
-        }
+        }   
 
         /// <summary>
         /// Centers text by adding padding to the left.
@@ -95,6 +100,13 @@ namespace REND
             AppendUserLine(input);
             txtInput.Clear();
 
+            // Check if user is playing minigame
+            if (_minigame.IsGameActive)
+            {
+                HandleMinigameInput(input);
+                return;
+            }
+
             // If user name not set, try to capture it
             if (string.IsNullOrEmpty(_userName))
             {
@@ -105,6 +117,15 @@ namespace REND
                     RendWriteLine($"Nice to meet you, {_userName}! I'm Rend, your cyber security guide. Ask me anything about cyber security. Say 'Help' for topics or 'Bye' to exit.");
                     return;
                 }
+            }
+
+            // Check for minigame activation (case-insensitive, ignore punctuation)
+            if (IsMinigameActivation(input))
+            {
+                string gameStartMessage = _minigame.StartGame();
+                RendWriteLine(gameStartMessage);
+                RendWriteLine(_minigame.GetNextQuestion());
+                return;
             }
 
             // Exit conditions
@@ -180,6 +201,36 @@ namespace REND
             {
                 RendWriteLine("I'm not sure I understand. Try asking about \"Cyber Security\", \"Types\", \"Safe Browsing\", or say \"Hello\".");
             }
+        }
+
+        /// <summary>
+        /// Handles input while the minigame is active.
+        /// </summary>
+        private void HandleMinigameInput(string input)
+        {
+            // Check for quit commands
+            if (input.Equals("quit", StringComparison.OrdinalIgnoreCase) ||
+                input.Equals("quit game", StringComparison.OrdinalIgnoreCase))
+            {
+                string quitMessage = _minigame.QuitGame();
+                RendWriteLine(quitMessage);
+                return;
+            }
+
+            // Process answer
+            string resultMessage = _minigame.ProcessAnswer(input);
+            RendWriteLine(resultMessage);
+        }
+
+        /// <summary>
+        /// Checks if the input is a minigame activation command.
+        /// Case-insensitive and ignores punctuation.
+        /// </summary>
+        private bool IsMinigameActivation(string input)
+        {
+            // Remove punctuation and convert to lowercase
+            string normalized = Regex.Replace(input.ToLowerInvariant(), @"[^\w\s]", "");
+            return normalized == "lets play a game" || normalized == "let's play a game";
         }
 
         /// <summary>

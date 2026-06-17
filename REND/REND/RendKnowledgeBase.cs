@@ -272,7 +272,43 @@ namespace REND
                 "2FA significantly improves account security. Do you use it on your important accounts?"
             },
 
-             //Disrespectful/ abusive entries
+            // Task Management
+            ["Task Management"] = new[]
+            {
+                "I can help you manage cybersecurity tasks! Try 'Add task', 'Show tasks', 'Complete task #', or 'Delete task #'.",
+                "You can add, view, complete, and delete cybersecurity tasks. What would you like to do?",
+                "Task management helps you track security improvements. Say 'Add task' to get started!"
+            },
+
+            ["Add task"] = new[]
+            {
+                "To add a task, use: Add task | Title | Description | Reminder (optional, like '7 days')",
+                "Format: Add task | Set up two-factor authentication | Enable 2FA on all accounts | 7 days",
+                "Create a task with a title, description, and optional reminder to stay on track!"
+            },
+
+            ["Show tasks"] = new[]
+            {
+                "I'll display all your cybersecurity tasks here.",
+                "Let me retrieve your tasks...",
+                "Here are your current security tasks..."
+            },
+
+            ["Complete task"] = new[]
+            {
+                "Great! Completing security tasks keeps you safe. Use 'Complete task #' where # is the task number.",
+                "Mark tasks as done to track your security progress.",
+                "Nice work on staying cyber-secure!"
+            },
+
+            ["Delete task"] = new[]
+            {
+                "You can remove tasks using 'Delete task #' where # is the task number.",
+                "Delete outdated or completed tasks to keep your list clean.",
+                "Use 'Delete task #' to remove a task from your list."
+            },
+
+            // Disrespectful/ abusive entries
 
              ["Fuck"] = new[]
              {
