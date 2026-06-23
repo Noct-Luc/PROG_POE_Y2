@@ -33,3 +33,7 @@ Version 0-12: Added Insults
 Version 0-13: Added more cyber security tips
 
 Version 0-14: Added random tips selection
+
+Version 0-15: Added activity log
+
+
