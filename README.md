@@ -38,4 +38,10 @@ Version 0-15: Added activity log
 
 Version 0-16: Added minigame
 
-Version 0-16: Added task manager
+Version 0-17: Added task manager
+
+Version 0-18: Added databse integration
+
+Version 0-19: Many bugs, hate REND
+
+
