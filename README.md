@@ -44,4 +44,6 @@ Version 0-18: Added databse integration
 
 Version 0-19: Many bugs, hate REND
 
-Version 0-20: Rend will not be making it out alive
+Version 0-20: REND will not be making it out alive
+
+Version 0-21: Its done, I hope
