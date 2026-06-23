@@ -37,3 +37,5 @@ Version 0-14: Added random tips selection
 Version 0-15: Added activity log
 
 Version 0-16: Added minigame
+
+Version 0-16: Added task manager
