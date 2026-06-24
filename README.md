@@ -1,7 +1,11 @@
 Chatbot Rend
 Setup: Copy the code from repo and run it in your IDE
-https://youtu.be/j75p_eyUN_0?si=heUk-tKL3hzo9BGc
 
+Link to YT presentations down below:
+https://youtu.be/j75p_eyUN_0?si=heUk-tKL3hzo9BGc
+https://youtu.be/T0ptHuLZv1I?si=spF_PDFJTX5XNqP6
+
+Version Progress doc:
 Version 0-1: reponse dictionary made
 
 Version 0-2: Project name has been set to REND, exit conditions set
