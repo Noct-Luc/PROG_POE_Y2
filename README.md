@@ -47,3 +47,5 @@ Version 0-19: Many bugs, hate REND
 Version 0-20: REND will not be making it out alive
 
 Version 0-21: Its done, I hope
+
+Version 0-22: Has bug, wont fix, does wat its supposed to do. I'm out
